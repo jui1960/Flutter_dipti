@@ -19,7 +19,7 @@ class NoteHomePage extends StatelessWidget {
             TextField(
               controller: controller,
               decoration: const InputDecoration(
-                hintText: "Enter note here...",
+                hintText: "ENTER NOTE HERE",
                 border: OutlineInputBorder(),
               ),
             ),
@@ -29,12 +29,12 @@ class NoteHomePage extends StatelessWidget {
                 noteVM.addNote(controller.text);
                 controller.clear();
               },
-              child: const Text("Add Note"),
+              child: const Text("ADD NOTE"),
             ),
             const SizedBox(height: 16),
             Expanded(
               child: noteVM.notes.isEmpty
-                  ? const Center(child: Text("No notes yet"))
+                  ? const Center(child: Text("NO NOTE YETS"))
                   : ListView.builder(
                 itemCount: noteVM.notes.length,
                 itemBuilder: (context, index) {
